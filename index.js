@@ -54,15 +54,14 @@ function getRollCounts(rolls) {
   let object = {}
   
   for (let roll of rolls) {
-    object[roll] = 0;
+    object[roll] = 1;
   }
 
-  for (let num in rolls){
-    if (num === Number(object.roll)){
-      object['num'] += 1;
+  for (let i = 0; i < rolls.length; i++){
+    if(Number(object[i]) === i){
+      object[i] += 1;
     }
-  }
-  console.log(object)
+  }  
   return object;
 }
 
